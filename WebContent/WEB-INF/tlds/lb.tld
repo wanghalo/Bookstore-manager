@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd" > -->
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+  <description>My Tag 1.0 core library</description>
+  <display-name>My Tag core</display-name>
+  <tlib-version>1.0</tlib-version>
+  <!-- 标签库默认别名 -->
+  <short-name>study</short-name>
+  <!-- 标签库的唯一标识，在jsp页面使用这个值来引入当前的标签库 -->
+  <uri>http://java.BookStore.cn/jsp/myjstl/study</uri>
+  <tag>
+  <!-- 标签名 -->
+    <name>checkcategory</name>
+    <!-- 标签所对应的处理器类 -->
+    <tag-class>com.twinkle.bookstore.mytab.CheckCategoryTag</tag-class>
+    <!-- 标签体的类型 -->
+    <body-content>scriptless</body-content>
+    
+    <attribute>
+    	<!-- 属性名，必须与jsp中写的标签的属性名称和处理器类的set属性一致 -->
+    	<name>id</name>
+    	<!-- 这个属性不是必须的 -->
+    	<required>true</required>
+    	<!-- runtime expression value 这个属性的值能不能用el表达式去取值 -->
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
